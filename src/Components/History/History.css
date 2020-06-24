@@ -1,0 +1,12 @@
+.container{
+    padding: 30px;
+    border: 2px solid black;
+    margin: 20px;
+    background-color: rgb(168, 164, 164);
+    border-radius: 10px;
+}
+
+.wrapper{
+    background-color: blue;
+    border: 1px solid black;
+}

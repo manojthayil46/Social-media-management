@@ -1,15 +1,15 @@
 const initialState = {
         
-    isSignedIn: ''
+    user : ''
 }
 
 const DashboardReducer = (state = initialState,action)=>{
     switch(action.type){
-        // case ISSIGNEDIN:
-        //     return {
-        //         ...state,
-        //         isSignedIn : action.value
-        //     }
+         case 'USER':
+             return {
+                 ...state,
+                 user : action.value
+             }
     }
 
     return state;

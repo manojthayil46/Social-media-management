@@ -5,6 +5,8 @@ import Login from './Components/Login/Login';
 import Home from './Components/Home/Home';
 import {BrowserRouter as Router,Link,Route,Switch} from 'react-router-dom';
 import Dashboard from './Components/Dashboard/Dashboard';
+import History from './Components/History/History';
+import Modal from './Modal/Modal'
 class App extends Component {
 
 
@@ -36,6 +38,9 @@ class App extends Component {
     <Route path = "/" exact component = {Login} />
       <Switch>
         <Route path ="/Dashboard" component ={Dashboard}/>
+        <Route path ="/History" component ={History}/>
+        
+       
       </Switch>
      
       

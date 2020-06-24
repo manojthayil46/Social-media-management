@@ -10,7 +10,7 @@ class Login extends React.Component {
     uiConfig = {
     signInFlow: "popup",
     signInOptions: [
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID 
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID 
     ],
     callbacks: {
       signInSuccess: () => false
@@ -22,18 +22,22 @@ class Login extends React.Component {
       //this.setState({ isSignedIn: !!user })
       //this.props.onPageLoad(!!user);
      
-             
-      console.log("user", user)
+      
     })
   }
 
    signin = () =>
     {
-    var provider = new firebase.auth.TwitterAuthProvider();
+    var provider = new firebase.auth.FacebookAuthProvider();
     fire.auth().useDeviceLanguage();
-    fire.auth().signInWithPopup(provider).then(user => {
+    fire.auth().signInWithPopup(provider).then(wholeUserData => {
   // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
   // You can use these server side with your app's credentials to access the Twitter API.
+  const user = wholeUserData.user;
+  console.log(wholeUserData.user);
+
+  
+    console.log(this.props.onDashBoardLoad(user));
      this.props.history.replace('/Dashboard');
   
   console.log(user);
@@ -71,12 +75,14 @@ class Login extends React.Component {
         ) :
         <div>
         <button className = {Styles.twitter_btn} onClick={this.signin} id="sign-in">
-            Sign in with Twitter
+            Sign in with Facebook
         </button><br></br>
 
         <button className = {Styles.twitterr_btn} onClick={this.signintest} id="sign-in">
             Signtest
         </button>
+
+        
 
 
 
@@ -107,7 +113,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) =>{
 
   return{
-    //onPageLoad = (value) => dispatch({type : 'ISSIGNEDIN',value:value})
+     
+    onDashBoardLoad : (user) => dispatch({type : 'USER',value:user})
+    
 
   }
 
