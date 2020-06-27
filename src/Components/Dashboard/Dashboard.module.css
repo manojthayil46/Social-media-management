@@ -1,6 +1,8 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-body { 
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -13,64 +15,48 @@ body {
   justify-content: space-between;
 }
 
-
 /*This is the right section of the header */
-.headerRight{
+.headerRight {
   display: flex;
 }
 
-h5{
+h5 {
   display: inline;
   color: white;
 }
 
-.profileLogo{
-    height: 50px;
-    width: 50px;
-    padding: 5px;;
-    border-radius: 50%;
+.profileLogo {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 50%;
 }
 
-
-
-
-
-.logout{
-    border-radius: 10px;
-    color: white;
-    background-color: transparent;
-    margin: 5px;
-    
+.logout {
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  margin: 5px;
 }
-
-
 
 /*This is the left section of Header */
 
-ul{
-	list-style: none;
-	display: flex;
-  padding : 20px;
-  margin-left: 200px;
-	
+ul {
+  list-style: none;
+  display: flex;
+  padding: 20px;
+  /* margin-left: 200px; */
 }
-.list_tabs{
-	
-	display: block;
-	cursor: pointer;
-	
+.list_tabs {
+  display: block;
+  cursor: pointer;
 }
 
-
-
-.Nav_Link{
-	text-decoration: none;
-	color:white;
-	padding: 15px;
-	font-family: 'Metal Mania', cursive;
-	font-size: 25px;
-	padding: 15px;
-	
+.Nav_Link {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  font-family: "Metal Mania", cursive;
+  font-size: 25px;
+  padding: 15px;
 }
-
-
