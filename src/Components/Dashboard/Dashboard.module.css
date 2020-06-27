@@ -60,3 +60,23 @@ ul {
   font-size: 25px;
   padding: 15px;
 }
+
+.flexcontainer {
+  display: flex;
+}
+
+div.columns {
+  flex: 1;
+  padding: 10px;
+}
+
+div.columns:nth-of-type(even) {
+  flex: 3;
+}
+
+.profileLogo {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 50%;
+}

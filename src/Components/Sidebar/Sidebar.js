@@ -28,6 +28,12 @@ class Sidebar extends Component {
         }
       });
   };
+
+  updateDetails = (description, timestamp, key, postid) => {
+    console.log("function called");
+    this.props.updateSent(description, timestamp, key, postid);
+  };
+
   render() {
     return (
       <div
@@ -40,13 +46,23 @@ class Sidebar extends Component {
         }}
       >
         {this.state.isDataSet ? (
-          this.state.change.map((data) => (
-            <Card
-              key={data[0]}
-              description={data[1].description}
-              timestamp={data[1].timestamp}
-            />
-          ))
+          this.state.change.map((data) => {
+            return (
+              <Card
+                key={data[0]}
+                description={data[1].description}
+                timestamp={data[1].timestamp}
+                clicked={() =>
+                  this.updateDetails(
+                    data[1].description,
+                    data[1].timestamp,
+                    data[0],
+                    data[1].post_id
+                  )
+                }
+              />
+            );
+          })
         ) : (
           <p
             style={{

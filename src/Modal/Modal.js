@@ -11,12 +11,14 @@ class Modal extends Component {
   schedule = () => {
     axios
       .post(
-        `https://graph.facebook.com/101549628270074/feed?published=false&message=${this.props.getdescription}&access_token=EAADrPoZB6tE0BAG0pKZCJZA4PR7HrcSUdLffeLWd4HH1j1plAGbNWGUZBwiHmTisq5jzZCc6Si6hwZBaBuOVFpEhvWgjylZAPDNNIh4ZAZAuXUDzX3p4ocPylROYVYl6w1x8FvhRpmZBV9kj2Rz968Pr6mkm3JZCutPN5Ehucok0hL3c7r8VIkWZA2ziZBDViA220ypUZD&scheduled_publish_time=${this.props.gettimestamp}`
+        `https://graph.facebook.com/101549628270074/feed?published=false&message=${this.props.getdescription}&access_token=EAADrPoZB6tE0BAKxAg1MIlZC3aD69VZAS44mSBJ6Cub3vuyPVfd6ZCtu1dLP5Y6v9wG6uEm0sbYlgrIW5Hnv3ONQhxLic7doPVAG7TJt5GDN5rCTZAdfximH5iKbqnPU5gdJWUXyytrFR7FWXmuQKSBGf7nITDFgYuC9jVWEiUgNNpybZBTljg7yDv3YKhj6IZD&scheduled_publish_time=${this.props.gettimestamp}`
       )
       .then((response) => {
+        console.log(response.data);
         const mydata = {
           description: this.props.getdescription,
           timestamp: this.props.gettimestamp,
+          post_id: response.data.id,
         };
         axios
           .post(
@@ -65,12 +67,12 @@ class Modal extends Component {
         <div
           className="Modal"
           style={{
-            height: "300px",
+            height: "400px",
             textAlign: "center",
             position: "fixed",
             backgroundColor: "#D3D3D3",
             zIndex: "500",
-            left: "15%",
+            left: "25%",
             top: "15%",
             boxSizing: "border-box",
             width: "50%",
@@ -91,7 +93,7 @@ class Modal extends Component {
 
             <textarea
               wrap="off"
-              cols="60"
+              cols="80"
               rows="5"
               id="textarea"
               placeholder="Write some text..."
@@ -104,7 +106,7 @@ class Modal extends Component {
               {" "}
               <strong>Enter Unix timestamp</strong>
             </label>
-            <br />
+
             <br />
             <input
               type="text"

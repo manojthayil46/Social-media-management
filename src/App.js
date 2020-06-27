@@ -35,7 +35,6 @@ class App extends Component {
           <Switch>
             <Route path="/Dashboard" component={Dashboard} />
           </Switch>
-          <Sidebar />
         </div>
       </Router>
     );
