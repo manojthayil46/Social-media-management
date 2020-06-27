@@ -5,9 +5,9 @@ import firebase from "firebase";
 import Styles from "./Login.module.css";
 // import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { connect } from "react-redux";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 // import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
+// import AppBar from "@material-ui/core/AppBar";
 
 class Login extends React.Component {
   uiConfig = {
