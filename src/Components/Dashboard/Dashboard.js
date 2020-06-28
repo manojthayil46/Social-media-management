@@ -58,12 +58,9 @@ class Dashboard extends Component {
       <div>
         <div className={Styles.header}>
           <div className={Styles.headerLeft}>
+            <p className={Styles.dashboard_logo}>Social Media Management</p>
+
             <ul>
-              <li>
-                <button type="button" class="btn btn-primary mr-5">
-                  Dashboard
-                </button>
-              </li>
               <li>
                 <button
                   type="button"

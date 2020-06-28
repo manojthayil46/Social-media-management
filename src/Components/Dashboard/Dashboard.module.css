@@ -80,3 +80,17 @@ div.columns:nth-of-type(even) {
   padding: 5px;
   border-radius: 50%;
 }
+
+.dashboard_logo {
+  font-family: "Metal Mania", cursive;
+  font-size: 20px;
+  padding-top: 20px;
+  color: white;
+
+  top: 20%;
+}
+
+.headerLeft {
+  display: flex;
+  justify-content: space-around;
+}
