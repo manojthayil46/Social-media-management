@@ -49,6 +49,10 @@ class Dashboard extends Component {
       showUpdateBox: true,
     });
   };
+
+  nextPath = (path) => {
+    this.props.history.push("/History");
+  };
   render() {
     return (
       <div>
@@ -78,7 +82,7 @@ class Dashboard extends Component {
                 <button
                   type="button"
                   className="btn btn-light mr-2"
-                  to="/History"
+                  onClick={() => this.nextPath("/History")}
                 >
                   History
                 </button>

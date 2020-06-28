@@ -9,9 +9,11 @@ class Modal extends Component {
   };
 
   schedule = () => {
+    const url =
+      "EAADrPoZB6tE0BAB1i3yHh3cSyT6Ns1GU2A62n5eexirEJiDYhtuzVRBHJyUBhnEZAH12BvZBEoKBSxNtvoL1FiJMozUZBZBTEGZAqxTcxsbZCtdzbdcqNV2XeagZAiN5LmBOhwTLY4be4ZBmSrQdeZAJoMfFrXZCppAoNQpwyP8XwHCdyZCWPstOVap2ZANaILNr6tBAZD";
     axios
       .post(
-        `https://graph.facebook.com/101549628270074/feed?published=false&message=${this.props.getdescription}&access_token=EAADrPoZB6tE0BAKxAg1MIlZC3aD69VZAS44mSBJ6Cub3vuyPVfd6ZCtu1dLP5Y6v9wG6uEm0sbYlgrIW5Hnv3ONQhxLic7doPVAG7TJt5GDN5rCTZAdfximH5iKbqnPU5gdJWUXyytrFR7FWXmuQKSBGf7nITDFgYuC9jVWEiUgNNpybZBTljg7yDv3YKhj6IZD&scheduled_publish_time=${this.props.gettimestamp}`
+        `https://graph.facebook.com/101549628270074/feed?published=false&message=${this.props.getdescription}&access_token=${url}&scheduled_publish_time=${this.props.gettimestamp}`
       )
       .then((response) => {
         console.log(response.data);
@@ -35,11 +37,12 @@ class Modal extends Component {
   };
 
   shareNow = () => {
+    const url =
+      "EAADrPoZB6tE0BAB1i3yHh3cSyT6Ns1GU2A62n5eexirEJiDYhtuzVRBHJyUBhnEZAH12BvZBEoKBSxNtvoL1FiJMozUZBZBTEGZAqxTcxsbZCtdzbdcqNV2XeagZAiN5LmBOhwTLY4be4ZBmSrQdeZAJoMfFrXZCppAoNQpwyP8XwHCdyZCWPstOVap2ZANaILNr6tBAZD";
     axios
       .post("https://graph.facebook.com/101549628270074/feed?", {
         message: this.props.getdescription,
-        access_token:
-          "EAADrPoZB6tE0BAD4HOqMAhrgKJ47mhiaAcHZAHWgByyXF5BqgJMu0t0W63m9VE5JqILPZAyxU8BvFyhtpFOxmFvgda8P20eGYIooVAqPpdGfcFkSdRqpAgaf4Jm1QkOZClasPB8rf7UW9fL8BM5LxL52LmPctepEWaYE5pjSTdanRtR2ktuJnzUvZB5xClZA4151JVbOvngQZDZD",
+        access_token: url,
       })
       .then((response) => {
         axios

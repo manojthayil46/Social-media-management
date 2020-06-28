@@ -2,11 +2,17 @@
   padding: 30px;
   border: 2px solid black;
   margin: 20px;
-  background-color: rgb(168, 164, 164);
+  background-color: white;
   border-radius: 10px;
 }
 
 .wrapper {
-  background-color: blue;
+  background-color: white;
   border: 1px solid black;
+}
+
+.recentPosts {
+  font-size: large;
+  text-decoration: underline;
+  font-weight: 500;
 }

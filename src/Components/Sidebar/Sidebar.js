@@ -37,12 +37,14 @@ class Sidebar extends Component {
   render() {
     return (
       <div
-        className="d-flex overflow-auto flex-column m-2"
+        className="wrapper"
+        //className="d-flex overflow-auto flex-column m-2"
         style={{
-          width: "auto%",
+          width: "21%",
           height: "100%",
           position: "fixed",
           backgroundColor: "white",
+          overflowY: "scroll",
         }}
       >
         {this.state.isDataSet ? (

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Modal from "./Modal/Modal";
+import History from "./Components/History/History";
 class App extends Component {
   state = {
     user: "",
@@ -34,6 +35,7 @@ class App extends Component {
 
           <Switch>
             <Route path="/Dashboard" component={Dashboard} />
+            <Route path="/History" component={History} />
           </Switch>
         </div>
       </Router>

@@ -23,15 +23,28 @@ class History extends Component {
   }
 
   render() {
-    let myMap = this.state.data.map((post, index) => {
-      return (
-        <li className="container" key={index}>
-          {post.message}
-        </li>
-      );
-    });
+    //   let myMap = this.state.data.map((post, index) => {
+    //     return (
+    //       <li className="container" key={index}>
+    //         {post.message}
+    //       </li>
+    //     );
+    //   });
 
-    return <div className="wrapper d-flex mt-4">{myMap}</div>;
+    //   return <div className="wrapper">{myMap}</div>;
+    return (
+      <div className="wrapper">
+        <p className="recentPosts">Recent Posts</p>
+        {this.state.data.map((post, index) => {
+          return (
+            <li className="container" key={index}>
+              {post.message}
+            </li>
+          );
+        })}
+        ;
+      </div>
+    );
   }
 }
 
