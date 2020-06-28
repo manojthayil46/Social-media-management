@@ -81,9 +81,9 @@ class Login extends React.Component {
               <div>Signed In!</div>
             </span>
           ) : (
-            <div>
+            <div className={Styles.buttonBox}>
               <button
-                className="btn btn-primary mb-5 mt-3"
+                className="btn btn-primary mb-5 mt-3 "
                 onClick={this.signin}
                 id="sign-in"
               >
